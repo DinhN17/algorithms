@@ -61,5 +61,30 @@ var productOfLargestTwo = function(arr) {
     //try 1
     // arr.sort(function(a, b) {return b - a});
     // return arr[0] * arr[1];
+};
 
+// Write code to create a function that accepts a string and returns the string in camelCase
+var camelCase = function(str) {
+    
+    //try 2
+    var strArr = str.trim().split(" ");
+    strArr[0] = strArr[0].toLowerCase();
+    for (let index = 1; index < strArr.length; index++) {
+        let element = strArr[index];
+        strArr[index] = element[0].toUpperCase() + element.slice(1).toLowerCase();
+    }
+    
+    return strArr.join("");
+    
+    //try 1
+    // var lowerCase = str.toLowerCase().trim();
+    // var strArr = lowerCase.split("");
+
+    // for (let index = 0; index < strArr.length; index++) {
+    //     if (strArr[index] === " ") {
+    //         strArr.splice(index, 1);
+    //         strArr[index] = strArr[index].toUpperCase();
+    //     }
+    // }
+    // return strArr.join("");
 };

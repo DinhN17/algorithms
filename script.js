@@ -66,6 +66,11 @@ var productOfLargestTwo = function(arr) {
 // Write code to create a function that accepts a string and returns the string in camelCase
 var camelCase = function(str) {
     
+    //try 3
+    var result = str.trim().split(" ").map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase()).join("");
+    result[0] = result[0].toLowerCase();
+    return result;
+    
     //try 2
     var strArr = str.trim().split(" ");
     strArr[0] = strArr[0].toLowerCase();

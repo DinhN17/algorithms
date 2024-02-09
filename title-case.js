@@ -1,25 +1,33 @@
 // Write code to create a function takes a string and returns a new string with the first letters of each word capitalized
 
 var titleCase = function(str) {
-    
-    
-    // try 1
     str.trim();
     if (str.length === 0) {
         return str;
+    }
+
+    // try 2
+    var arr = str.split(" ");
+
+    for (let index = 0; index < arr.length; index++) {
+        const element = arr[index];
+        arr[index] = element[0].toUpperCase() + element.slice(1).toLowerCase();
     };
 
-    var arr = str.split("");
+    return arr.join(" ");
 
-    arr[0] = arr[0].toUpperCase();
-    for (let index = 1; index < arr.length; index++) {
-        if (arr[index - 1] === " ") {
-            arr[index] = arr[index].toUpperCase();
-            index++;
-        } else {
-            arr[index] = arr[index].toLowerCase();
-        };
-    };
+    // try 1
+    // var arr = str.split("");
 
-    return arr.join("");
+    // arr[0] = arr[0].toUpperCase();
+    // for (let index = 1; index < arr.length; index++) {
+    //     if (arr[index - 1] === " ") {
+    //         arr[index] = arr[index].toUpperCase();
+    //         index++;
+    //     } else {
+    //         arr[index] = arr[index].toLowerCase();
+    //     };
+    // };
+
+    // return arr.join("");
 };
